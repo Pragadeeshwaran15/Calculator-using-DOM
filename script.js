@@ -60,16 +60,22 @@ const input=document.querySelector("#result")
 const keyborad=document.querySelectorAll("button")
 keyborad.forEach((bot)=>{
     bot.addEventListener("click",()=>{
-        if(bot.id ==="=" ){
+        if(bot.id === "equal" ){
            input.value =eval(input.value)
         }
         
-         else if(bot.id === "C"){
+         else if(bot.id === "clear"){
             input.value = "";
         } 
-        else if(bot.id === "<-"){
-            display.value = display.value.slice(0,-1);
+        else if(bot.id === "del"){
+            input.value = input.value.slice(0,-1);
         } 
+        else if(bot.id === "add"){
+            input.value += "+";
+        } 
+        else if(bot.id === "subtract"){
+            input.value += "-";
+        }
         
         
         else{
